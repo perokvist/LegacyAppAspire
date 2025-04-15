@@ -1,10 +1,5 @@
 # LegacyAppAspire
 
-### TODO
-- [ ] Healthcheck(s)
-- [ ] Local secrets
-
-
 ## Aspire
 
 Using Aspire with a Legacy Web Application

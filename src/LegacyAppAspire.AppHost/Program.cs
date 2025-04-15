@@ -14,8 +14,8 @@ if (!builder.Environment.IsDevelopment())
         //.AddConnectionString("key-vault");
 
     var insights = builder.ExecutionContext.IsPublishMode
-        ? builder.AddAzureApplicationInsights("myInsightsResource")
-        : builder.AddConnectionString("myInsightsResource", "APPLICATIONINSIGHTS_CONNECTION_STRING");
+        ? builder.AddAzureApplicationInsights("AppInsights")
+        : builder.AddConnectionString("AppInsights", "APPLICATIONINSIGHTS_CONNECTION_STRING");
 
     azureActions = x => x
         .WithReference(keyVault)
@@ -31,6 +31,7 @@ var db = sql.AddDatabase("database");
 builder.AddProject<Projects.Web>("web")
        //.PublishAsDockerFile()
        .Tap(azureActions)
+       .WithHttpHealthCheck("/health")
        .WithReference(db)
        .WaitFor(db);
 
