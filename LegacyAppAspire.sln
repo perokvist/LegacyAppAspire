@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "src\Web\Web.csproj", "{AE2BDC88-D1CD-68A9-724B-0BB2BF755B0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyAppAspire.AppHost", "src\LegacyAppAspire.AppHost\LegacyAppAspire.AppHost.csproj", "{7BB2B33A-0F42-4CD9-913F-C0CEF295327F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyAppAspire.ServiceDefaults", "src\LegacyAppAspire.ServiceDefaults\LegacyAppAspire.ServiceDefaults.csproj", "{D3D246D2-4F3B-1C15-2E2B-6E5281B3036D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyAppAspire.AppHost.IntegrationTests", "test\LegacyAppAspire.AppHost.IntegrationTests\LegacyAppAspire.AppHost.IntegrationTests.csproj", "{43F2A695-7412-4552-9CF2-8E58F64AF91E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".bicep", ".bicep", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.bicep\app_insights.module.bicep = .bicep\app_insights.module.bicep
+		.bicep\container-registry.module.bicep = .bicep\container-registry.module.bicep
+		.bicep\key-vault.module.bicep = .bicep\key-vault.module.bicep
+		.bicep\main.bicep = .bicep\main.bicep
+		.bicep\sql_database.module.bicep = .bicep\sql_database.module.bicep
+		.bicep\web-app-plan.module.bicep = .bicep\web-app-plan.module.bicep
+		.bicep\web-app.module.bicep = .bicep\web-app.module.bicep
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE2BDC88-D1CD-68A9-724B-0BB2BF755B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2BDC88-D1CD-68A9-724B-0BB2BF755B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2BDC88-D1CD-68A9-724B-0BB2BF755B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2BDC88-D1CD-68A9-724B-0BB2BF755B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB2B33A-0F42-4CD9-913F-C0CEF295327F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB2B33A-0F42-4CD9-913F-C0CEF295327F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB2B33A-0F42-4CD9-913F-C0CEF295327F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB2B33A-0F42-4CD9-913F-C0CEF295327F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3D246D2-4F3B-1C15-2E2B-6E5281B3036D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D246D2-4F3B-1C15-2E2B-6E5281B3036D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D246D2-4F3B-1C15-2E2B-6E5281B3036D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D246D2-4F3B-1C15-2E2B-6E5281B3036D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F2A695-7412-4552-9CF2-8E58F64AF91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F2A695-7412-4552-9CF2-8E58F64AF91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F2A695-7412-4552-9CF2-8E58F64AF91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F2A695-7412-4552-9CF2-8E58F64AF91E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5C98A18-F021-4B23-9677-50C73A35FCEA}
+	EndGlobalSection
+EndGlobal

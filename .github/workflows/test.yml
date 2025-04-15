@@ -1,0 +1,47 @@
+name: Build and Test .NET
+
+on:
+  push:
+    branches:
+      - test
+  pull_request:
+    branches:
+      - test
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build the project
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Run tests
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Build container
+      run: |
+        dotnet publish -c Release -o ./publish
+        dotnet containerize --publish ./publish
+
+    - name: Login to Azure Container Registry
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Push container to Azure Container Registry
+      run: |
+        az acr login --name <your-acr-name>
+        docker tag <your-image-name>:latest <your-acr-name>.azurecr.io/<your-image-name>:latest
+        docker push <your-acr-name>.azurecr.io/<your-image-name
