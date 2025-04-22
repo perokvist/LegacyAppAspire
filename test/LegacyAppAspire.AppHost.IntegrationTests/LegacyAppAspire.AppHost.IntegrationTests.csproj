@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LegacyAppAspire.AppHost\LegacyAppAspire.AppHost.csproj" />
+    <ProjectReference Include="..\..\src\LegacyAppAspire.AppHost\LegacyAppAspire.AppHost.csproj" />
   </ItemGroup>
 
   <ItemGroup>

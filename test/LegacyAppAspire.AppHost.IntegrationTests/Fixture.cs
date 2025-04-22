@@ -19,10 +19,8 @@ public class Fixture
         // Act
         var httpClient = app.CreateHttpClient("web");
         await resourceNotificationService.WaitForResourceAsync("web", KnownResourceStates.Running).WaitAsync(TimeSpan.FromSeconds(30));
-        var response = await httpClient.GetAsync("/test");
 
         // Assert
-        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-
+        await f(httpClient);
     }
 }
